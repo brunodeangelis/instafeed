@@ -1,6 +1,7 @@
 const puppeteer = require("puppeteer");
 const $ = require("cheerio");
 const express = require("express");
+const cors = require("cors");
 const app = express();
 
 const getUserImages = async user => {
@@ -48,6 +49,8 @@ const getUserImages = async user => {
 
   return photos;
 };
+
+app.use(cors());
 
 app.get("/:user", async (req, res) => {
   const imgs = await getUserImages(req.params.user);
