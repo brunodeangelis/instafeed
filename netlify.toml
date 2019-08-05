@@ -1,4 +1,4 @@
 [build]
   base = "client/"
   publish = "client/dist/"
-  command = "gridsome develop"
+  command = "gridsome build"
