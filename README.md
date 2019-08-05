@@ -12,15 +12,19 @@ Modify API URL inside client's .env file.
 ## 🚀 Deploy
 
 Server (from branch "heroku-server")
+
 [![Deploy server to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/brunodeangelis/heroku-server)
 
 Client
+
 [![Deploy client to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/brunodeangelis/instafeed)
 
 ## 📦 Buildpacks
 
 Server uses the following Heroku buildpacks:
+
 jontweks/puppeteer: For ensuring Puppeteer dependencies are installed on the server
+
 heroku/nodejs: For building and running our Express app
 
 ## 💻 Commands
