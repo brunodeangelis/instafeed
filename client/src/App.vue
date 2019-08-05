@@ -52,13 +52,9 @@
 
     <footer class="bg-gray-900 py-4 mt-16">
       <div class="container mx-auto">
+        <a href="#" class="text-gray-400 tracking-wide mr-8 hover:text-white">❤ Bruno De Angelis</a>
         <a
-          href="#"
-          target="_blank"
-          class="text-gray-400 tracking-wide mr-8 hover:text-white"
-        >❤ Bruno De Angelis</a>
-        <a
-          href="#"
+          href="https://github.com/brunodeangelis/instafeed"
           target="_blank"
           class="text-gray-400 tracking-wide hover:text-white"
         >View on GitHub</a>
