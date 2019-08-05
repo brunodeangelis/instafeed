@@ -1,3 +1,6 @@
+// Running heroku/nodejs
+// Running jontweks/puppeteer buildpack
+
 const puppeteer = require("puppeteer");
 const $ = require("cheerio");
 const express = require("express");
