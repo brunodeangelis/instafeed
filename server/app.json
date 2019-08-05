@@ -1,0 +1,12 @@
+{
+  "name": "Instafeed",
+  "description": "A Puppeteer and Cheerio scraper to get profile pictures and descriptions from Instagram",
+  "repository": "https://github.com/brunodeangelis/instafeed",
+  "keywords": ["node", "express", "puppeteer", "cheerio"],
+  "env": {
+    "PORT": {
+      "description": "What port to deploy the Express app",
+      "value": 80
+    }
+  }
+}
