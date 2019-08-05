@@ -4,8 +4,10 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 const getUserImages = async user => {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({ args: ["--no-sandbox", "--disable-setuid-sandbox"], headless: true });
   const page = await browser.newPage();
   await page.goto(`https://www.instagram.com/${user}`);
   await page.waitForSelector("img", {
@@ -52,11 +54,15 @@ const getUserImages = async user => {
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Use /:user endpoint to get user pictures.");
+});
+
 app.get("/:user", async (req, res) => {
   const imgs = await getUserImages(req.params.user);
   res.send(imgs);
 });
 
-app.listen(3000, () => {
-  console.log("Listening @ 3000");
+app.listen(port, () => {
+  console.log(`Listening at ${port}`);
 });
